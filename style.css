@@ -1,0 +1,2063 @@
+/* ===========================
+   GOOGLE FONT STYLES
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    background:#040816;
+    color:white;
+}
+
+input{
+
+    padding:15px 25px;
+
+    border-radius:30px;
+
+    border:none;
+
+    font-size:18px;
+
+    margin-top:20px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   ANIMATED STARS
+=========================== */
+
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:
+    radial-gradient(white 1px,transparent 1px);
+    background-size:40px 40px;
+    animation:starsMove 70s linear infinite;
+    opacity:.35;
+    z-index:-2;
+}
+
+@keyframes starsMove{
+
+    from{
+        background-position:0 0;
+    }
+
+    to{
+        background-position:1000px 1000px;
+    }
+
+}
+
+/* ===========================
+   SCREEN
+=========================== */
+
+.screen{
+
+    width:100%;
+    height:100vh;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.screen.active{
+
+    display:flex;
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.content{
+
+    max-width:850px;
+
+}
+
+.content h1{
+
+    font-size:60px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.content p{
+
+    font-size:22px;
+
+    line-height:38px;
+
+    min-height:120px;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+
+    margin-top:40px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:#ff4f87;
+
+    color:white;
+
+    font-size:20px;
+
+    transition:.35s;
+
+    font-weight:bold;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 25px #ff4f87;
+
+}
+
+/* ===========================
+   ENVELOPE
+=========================== */
+
+.envelope-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.envelope{
+
+    position:relative;
+
+    width:300px;
+
+    height:200px;
+
+    cursor:pointer;
+
+}
+
+/* flap */
+
+.flap{
+
+    position:absolute;
+
+    width:100%;
+
+    height:110px;
+
+    background:#efb8b8;
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+
+    transform-origin:top;
+
+    transition:1s;
+
+    z-index:5;
+
+}
+.flap{
+
+    z-index:5;
+
+}
+
+.envelope.open .flap{
+
+    transform:rotateX(180deg);
+
+}
+
+/* letter */
+.letter{
+
+    position:absolute;
+
+    width:300px;
+
+    min-height:260px;
+
+    max-height:450px;
+
+
+    background:#fff8f0;
+
+    color:#5a2a35;
+
+
+    left:0;
+
+    top:0;
+
+
+    padding:30px;
+
+
+    border-radius:12px;
+
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:22px;
+
+    line-height:32px;
+
+
+    box-shadow:0 0 30px rgba(255,255,255,.5);
+
+
+    overflow-y:auto;
+
+
+    z-index:10;
+
+
+    transform:translateY(0);
+
+
+    transition:1.2s ease;
+
+}
+
+.letter h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:38px;
+
+    color:#ff4f87;
+
+    margin-bottom:15px;
+
+}
+
+.letter p{
+
+    font-size:16px;
+
+    line-height:28px;
+
+}
+
+/* opened state */
+
+.envelope.open .flap{
+
+    transform:rotateX(180deg);
+
+}
+
+.envelope.open .letter{
+
+    bottom:20px;
+
+}
+
+/* floating */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* click text */
+
+.clickText{
+
+    margin-top:30px;
+
+    font-size:20px;
+
+    color:#ffd3e0;
+
+}
+
+/* ===========================
+   FADE
+=========================== */
+
+.fadeOut{
+
+    animation:fadeOut .8s forwards;
+
+}
+
+.fadeIn{
+
+    animation:fadeIn .8s forwards;
+
+}
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff4f87;
+
+    border-radius:10px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.content h1{
+
+    font-size:40px;
+
+}
+
+.content p{
+
+    font-size:18px;
+
+}
+
+.envelope{
+
+    width:280px;
+
+    height:190px;
+
+}
+
+.letter{
+
+    height:230px;
+
+}
+
+button{
+
+    font-size:18px;
+
+    padding:15px 35px;
+
+}
+
+}
+
+/* =================================
+   TIMELINE SECTION
+================================= */
+
+
+.timelineScreen{
+
+    overflow-y:auto;
+
+    height:100vh;
+
+    display:none;
+
+}
+
+
+.timeline-container{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+
+.timeline-container h1{
+
+    text-align:center;
+
+    font-size:50px;
+
+    margin-bottom:70px;
+
+    font-family:'Dancing Script',cursive;
+
+}
+
+
+
+/* Timeline line */
+
+.timeline{
+
+    position:relative;
+
+    margin:auto;
+
+}
+
+
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:4px;
+
+    height:100%;
+
+    background:#ff4f87;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    border-radius:10px;
+
+}
+
+
+
+/* Timeline item */
+
+.timeline-item{
+
+    position:relative;
+
+    width:50%;
+
+    padding:30px;
+
+}
+
+
+
+.timeline-item:nth-child(odd){
+
+    left:0;
+
+    text-align:right;
+
+}
+
+
+
+.timeline-item:nth-child(even){
+
+    left:50%;
+
+}
+
+
+
+
+
+/* Glowing dots */
+
+.timeline-dot{
+
+    position:absolute;
+
+    top:35px;
+
+    width:55px;
+
+    height:55px;
+
+    background:#ff4f87;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:25px;
+
+    box-shadow:0 0 25px #ff4f87;
+
+}
+
+
+
+.timeline-item:nth-child(odd) .timeline-dot{
+
+    right:-27px;
+
+}
+
+
+
+.timeline-item:nth-child(even) .timeline-dot{
+
+    left:-27px;
+
+}
+
+
+
+
+
+/* Cards */
+
+
+.timeline-card{
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(15px);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    transition:.4s;
+
+}
+
+
+
+.timeline-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 30px rgba(255,79,135,.5);
+
+}
+
+
+
+.timeline-card h2{
+
+    color:#ff9bbb;
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.timeline-card p{
+
+    font-size:17px;
+
+    line-height:30px;
+
+    min-height:auto;
+
+}
+
+
+
+
+
+
+/* MOBILE TIMELINE */
+
+
+@media(max-width:768px){
+
+
+.timeline::before{
+
+    left:20px;
+
+}
+
+
+
+.timeline-item{
+
+    width:100%;
+
+    left:0 !important;
+
+    padding-left:70px;
+
+    text-align:left !important;
+
+}
+
+
+
+.timeline-item .timeline-dot{
+
+    left:-7px;
+
+}
+
+
+
+.timeline-container h1{
+
+    font-size:40px;
+
+}
+
+
+}
+
+/* =================================
+   MEMORY GALLERY SECTION
+================================= */
+
+
+.galleryScreen{
+
+    overflow-y:auto;
+
+    padding:60px 20px;
+
+}
+
+
+
+.gallery-container{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+
+
+.gallery-container h1{
+
+    text-align:center;
+
+    font-size:50px;
+
+    font-family:'Dancing Script',cursive;
+
+    margin-bottom:60px;
+
+}
+
+
+
+/* Gallery layout */
+
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px;
+
+    justify-items:center;
+
+}
+
+
+
+/* Polaroid cards */
+
+
+.photo-card{
+
+    background:white;
+
+    color:#333;
+
+    width:300px;
+
+    padding:15px;
+
+    border-radius:5px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+    transition:.5s;
+
+    transform:rotate(-3deg);
+
+}
+
+
+
+/* Different rotations */
+
+
+.photo-card:nth-child(even){
+
+    transform:rotate(4deg);
+
+}
+
+
+
+.photo-card:hover{
+
+    transform:scale(1.1) rotate(0deg);
+
+    z-index:5;
+
+}
+
+
+
+/* Images */
+
+
+.photo-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:3px;
+
+}
+
+
+
+/* Caption */
+
+
+.photo-card p{
+
+    color:#333;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:25px;
+
+    text-align:center;
+
+    margin-top:15px;
+
+    min-height:auto;
+
+}
+
+
+
+
+
+/* Mobile */
+
+
+@media(max-width:768px){
+
+
+.gallery{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.photo-card{
+
+    width:280px;
+
+}
+
+
+
+.gallery-container h1{
+
+    font-size:40px;
+
+}
+
+
+}
+
+
+/* =================================
+   CINEMATIC MEMORY SLIDESHOW
+================================= */
+
+
+.memoryScreen{
+
+    overflow:hidden;
+
+    background:rgba(0,0,0,0.2);
+
+}
+
+
+
+.memory-container{
+
+    width:90%;
+
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+
+
+.memory-container h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:55px;
+
+    margin-bottom:50px;
+
+    color:#ffd1df;
+
+}
+
+
+
+
+
+.memory-slider{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+
+
+
+.memory-slider img{
+
+    width:500px;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 0 40px rgba(255,79,135,.6);
+
+
+    animation:
+
+    photoZoom 5s ease-in-out infinite;
+
+
+    transition:1s;
+
+}
+
+
+
+
+
+.memory-slider p{
+
+    margin-top:35px;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:35px;
+
+    color:white;
+
+    line-height:45px;
+
+    min-height:auto;
+
+
+    animation:textFade 1.5s;
+
+}
+
+
+
+
+
+/* Slow cinematic zoom */
+
+
+@keyframes photoZoom{
+
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+
+}
+
+
+
+
+
+/* Text animation */
+
+
+@keyframes textFade{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+/* Mobile */
+
+
+@media(max-width:768px){
+
+
+.memory-container h1{
+
+    font-size:40px;
+
+}
+
+
+.memory-slider img{
+
+    width:300px;
+
+    height:300px;
+
+}
+
+
+.memory-slider p{
+
+    font-size:28px;
+
+}
+
+
+}
+
+
+/* =================================
+   STORY OF US SECTION
+================================= */
+
+
+.storyScreen{
+
+    overflow-y:auto;
+
+    padding:60px 20px;
+
+}
+
+
+
+.story-container{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+
+.story-container h1{
+
+    text-align:center;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:55px;
+
+    color:#ffd1df;
+
+    margin-bottom:60px;
+
+}
+
+
+
+
+/* Cards container */
+
+
+.story-cards{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+
+}
+
+
+
+
+
+
+/* Story card */
+
+
+.story-card{
+
+
+    background:rgba(255,255,255,0.12);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:25px;
+
+
+    padding:35px;
+
+
+    border:1px solid rgba(255,255,255,0.2);
+
+
+    position:relative;
+
+
+    transition:.5s;
+
+
+    opacity:0;
+
+
+    transform:translateY(40px);
+
+
+}
+
+
+
+
+
+.story-card.show{
+
+
+    opacity:1;
+
+    transform:translateY(0);
+
+
+}
+
+
+
+
+
+.story-card:hover{
+
+
+    transform:translateY(-10px);
+
+
+    box-shadow:0 0 35px rgba(255,79,135,.5);
+
+
+}
+
+
+
+
+
+/* Icons */
+
+
+.story-icon{
+
+
+    width:65px;
+
+
+    height:65px;
+
+
+    border-radius:50%;
+
+
+    background:#ff4f87;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    font-size:30px;
+
+
+    position:absolute;
+
+
+    top:-30px;
+
+
+    left:30px;
+
+
+    box-shadow:0 0 25px #ff4f87;
+
+
+}
+
+
+
+
+
+
+.story-card h2{
+
+
+    margin-top:35px;
+
+
+    color:#ffb6cf;
+
+
+    font-size:32px;
+
+
+    font-family:'Dancing Script',cursive;
+
+
+}
+
+
+
+
+
+.story-card span{
+
+
+    color:#ffd1df;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+
+
+.story-card p{
+
+
+    margin-top:20px;
+
+
+    line-height:32px;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+/* Final emotional card */
+
+
+.final-card{
+
+
+    border:2px solid #ff4f87;
+
+
+    box-shadow:0 0 30px rgba(255,79,135,.5);
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:768px){
+
+
+.story-container h1{
+
+    font-size:40px;
+
+}
+
+
+
+.story-card{
+
+    padding:25px;
+
+}
+
+
+
+.story-card h2{
+
+    font-size:28px;
+
+}
+
+
+
+.story-card p{
+
+    font-size:16px;
+
+}
+
+}
+
+/* =================================
+   FINAL PROPOSAL SECTION
+================================= */
+
+
+.proposalScreen{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.75)
+    ),
+
+    url("images/hemalatha.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+
+.proposal-container{
+
+    width:90%;
+
+    max-width:900px;
+
+    text-align:center;
+
+    margin:auto;
+
+}
+
+
+
+
+
+.proposal-content{
+
+    animation:proposalAppear 2s ease;
+
+}
+
+
+
+
+
+/* Her name */
+
+
+.proposal-content h1{
+
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:90px;
+
+    color:#ffd1df;
+
+    text-shadow:
+
+    0 0 20px #ff4f87,
+
+    0 0 40px #ff4f87;
+
+
+    animation:nameGlow 3s infinite;
+
+
+}
+
+
+
+
+
+
+
+.proposal-content h2{
+
+
+    margin-top:20px;
+
+    font-size:35px;
+
+    color:white;
+
+    font-family:'Dancing Script',cursive;
+
+
+}
+
+
+
+
+
+
+
+.proposal-content p{
+
+
+    margin-top:40px;
+
+    font-size:22px;
+
+    line-height:40px;
+
+    color:#fff;
+
+
+}
+
+
+
+
+
+
+.proposal-question{
+
+
+    margin-top:40px;
+
+
+    font-size:30px;
+
+
+    color:#ffd1df;
+
+
+    animation:heartBeat 2s infinite;
+
+
+}
+
+
+
+
+
+
+.final-line{
+
+
+    margin-top:50px;
+
+
+    font-size:50px;
+
+
+    font-family:'Dancing Script',cursive;
+
+
+    color:#ffb6cf;
+
+
+}
+
+
+
+
+
+
+/* Animations */
+
+
+@keyframes proposalAppear{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+
+@keyframes nameGlow{
+
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+
+}
+
+
+
+
+
+
+@keyframes heartBeat{
+
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+
+}
+
+
+
+
+
+
+@media(max-width:768px){
+
+
+.proposal-content h1{
+
+    font-size:60px;
+
+}
+
+
+
+.proposal-content h2{
+
+    font-size:28px;
+
+}
+
+
+
+.proposal-content p{
+
+    font-size:18px;
+
+    line-height:30px;
+
+}
+
+
+
+.final-line{
+
+    font-size:38px;
+
+}
+
+
+}
+
+/* ===============================
+   CLICK GUIDE ANIMATION
+================================ */
+
+
+.click-guide{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+
+.click-text{
+
+    font-size:22px;
+
+    color:#ffd1df;
+
+    animation:
+
+    bounceClick 1.5s infinite;
+
+    font-family:'Dancing Script',cursive;
+
+}
+
+
+
+
+#startBtn{
+
+    cursor:pointer;
+
+    animation:
+
+    buttonGlow 2s infinite;
+
+}
+
+
+
+
+
+@keyframes bounceClick{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(10px);
+
+    }
+
+
+}
+
+
+
+
+
+@keyframes buttonGlow{
+
+
+    0%,100%{
+
+        box-shadow:0 0 10px #ff4f87;
+
+    }
+
+
+    50%{
+
+        box-shadow:0 0 30px #ff4f87;
+
+    }
+
+
+}
+
+/* =================================
+   ENVELOPE SECTION ENHANCEMENT
+================================= */
+
+
+.envelope-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+
+.envelope-hint{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:35px;
+
+    color:#ffd1df;
+
+    margin-bottom:40px;
+
+    animation:hintMove 1.5s infinite;
+
+}
+
+
+
+
+
+
+/* Floating effect for envelope */
+
+
+#envelope{
+
+    cursor:pointer;
+
+    animation:floatEnvelope 3s ease-in-out infinite;
+
+    filter:drop-shadow(0 0 25px rgba(255,79,135,.7));
+
+}
+
+
+
+
+
+
+/* Hint animation */
+
+
+@keyframes hintMove{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(10px);
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* Envelope floating */
+
+
+@keyframes floatEnvelope{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-20px);
+
+    }
+
+
+}
+
+
+
+
+/* =================================
+   LETTER REVEAL ANIMATION
+================================= */
+
+
+.letter{
+
+    background:#fff8f0;
+
+    color:#5a2a35;
+
+    width:350px;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:
+
+    0 0 40px rgba(255,255,255,.4);
+
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:25px;
+
+    line-height:35px;
+
+
+    transform:
+
+    translateY(80px)
+
+    scale(.8);
+
+
+    opacity:0;
+
+
+    transition:1s ease;
+
+
+}
+
+
+
+
+
+
+/* When envelope opens */
+
+
+.envelope.open .letter{
+
+    transform:translateY(-120px) scale(1);
+
+    opacity:1;
+
+}
+.envelope.open .letter{
+
+    transform:translateY(-280px);
+
+    z-index:20;
+
+}
+
+.letter{
+
+    background:#fff8f0;
+
+    color:#5a2a35;
+
+    width:350px;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%) translateY(80px) scale(.8);
+
+    opacity:0;
+
+    transition:1s ease;
+
+    z-index:5;
+
+}
+
+
+
+
+.letter p{
+
+
+    animation:
+
+    letterText 2s ease;
+
+
+}
+
+
+
+
+
+@keyframes letterText{
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:translateY(20px);
+
+
+    }
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:translateY(0);
+
+
+    }
+
+
+}
+
+.thank-you-proposal{
+
+    display:none;
+
+    margin-top:30px;
+
+    text-align:center;
+
+    font-size:28px;
+
+    color:#ffd1df;
+
+}
+
+
+/* .thank-you-proposal.show{
+
+    display:block;
+    animation:fadeIn 1s ease;
+
+}
+
+
+.thank-you-proposal p{
+
+    margin-top:15px;
+    font-size:22px;
+    line-height:35px;
+
+} */
+
+/* Proposal Yes No Buttons */
+
+.proposal-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+
+.proposal-buttons button{
+
+    margin-top:0;
+
+    padding:12px 35px;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    background:#ff4f87;
+
+    color:white;
+
+    cursor:pointer;
+
+}
